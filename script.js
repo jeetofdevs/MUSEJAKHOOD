@@ -1,9 +1,30 @@
 // ===== Config — edit these when the token is live =====
 const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on long.xyz
+const PAIR_ADDRESS = "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"; // $AI (Artificial Inu) on Robinhood Chain
+
+// $AI logo: drop the official file at assets/ai.png; otherwise try DexScreener's CDN, then a text badge.
+const AI_LOGO_FALLBACK = `https://dd.dexscreener.com/ds-data/tokens/robinhood/${PAIR_ADDRESS}.png`;
+document.querySelectorAll("img.ai-logo").forEach((img) => {
+  img.addEventListener("error", function onErr() {
+    if (!img.dataset.fallback) {
+      img.dataset.fallback = "1";
+      img.src = AI_LOGO_FALLBACK;
+      return;
+    }
+    img.removeEventListener("error", onErr);
+    const badge = document.createElement("span");
+    badge.className = img.className;
+    badge.setAttribute("role", "img");
+    badge.setAttribute("aria-label", img.alt);
+    badge.textContent = "AI";
+    img.replaceWith(badge);
+  });
+  if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event("error"));
+});
 
 const ALLOCATIONS = [
-  { name: "long.xyz Fair Launch", desc: "Bonding curve → $META pool, LP burned", pct: 80, color: "#d9b894" },
-  { name: "$META Holder Shrug-drop", desc: "Airdrop to $META holders on Robinhood Chain", pct: 5, color: "#e99a9a" },
+  { name: "long.xyz Fair Launch", desc: "Bonding curve → $AI pool, LP burned", pct: 80, color: "#d9b894" },
+  { name: "$AI Holder Shrug-drop", desc: "Airdrop to $AI holders on Robinhood Chain", pct: 5, color: "#e99a9a" },
   { name: "Shrug Treasury", desc: "Community memes, contests & plushies (multisig)", pct: 5, color: "#f7d6d6" },
   { name: "Listings Reserve", desc: "Future listings & liquidity", pct: 5, color: "#b98b73" },
   { name: "Marketing", desc: "KOLs, stickers & making noise", pct: 5, color: "#6b4636" },
@@ -21,15 +42,22 @@ function showToast(msg) {
   showToast.t = setTimeout(() => toast.classList.remove("show"), 1800);
 }
 
-document.getElementById("copyCa").addEventListener("click", async () => {
-  if (!CONTRACT_ADDRESS) return showToast("CA drops at launch 🤷");
+async function copy(text) {
   try {
-    await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+    await navigator.clipboard.writeText(text);
     showToast("Copied! 🤷");
   } catch {
     showToast("Copy failed — select it manually");
   }
+}
+
+document.getElementById("copyCa").addEventListener("click", () => {
+  if (!CONTRACT_ADDRESS) return showToast("CA drops at launch 🤷");
+  copy(CONTRACT_ADDRESS);
 });
+
+document.getElementById("pairAddr").textContent = PAIR_ADDRESS;
+document.getElementById("copyPair").addEventListener("click", () => copy(PAIR_ADDRESS));
 
 // ===== Mobile nav =====
 const navLinks = document.getElementById("navLinks");
@@ -41,7 +69,7 @@ const mascot = document.getElementById("mascot");
 const bubble = document.getElementById("bubble");
 const countEl = document.getElementById("shrugCount");
 const LINES = [
-  "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with $META btw",
+  "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with $AI btw",
   "wen moon? 🤷", "still felt, still fine", "robinhood chain comfy", "1.5% tax, 100% shrug",
   "who sold? 🤷", "just vibing", "stay soft", "gm 🧶",
 ];
