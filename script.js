@@ -1,5 +1,5 @@
 // ===== Config — edit these when the token is live =====
-const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on long.xyz
+const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on Pons
 const PAIR_ADDRESS = "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"; // $AI (Artificial Inu) on Robinhood Chain
 
 // $AI logo: drop the official file at assets/ai.jpg; otherwise try DexScreener's CDN, then a text badge.
@@ -23,7 +23,7 @@ document.querySelectorAll("img.ai-logo").forEach((img) => {
 });
 
 const ALLOCATIONS = [
-  { name: "long.xyz Fair Launch", desc: "Bonding curve → $AI pool, LP burned", pct: 80, color: "#d9b894" },
+  { name: "Pons Fair Launch", desc: "Bonding curve → $AI pool, LP burned", pct: 80, color: "#d9b894" },
   { name: "$AI Holder Shrug-drop", desc: "Airdrop to $AI holders on Robinhood Chain", pct: 5, color: "#e99a9a" },
   { name: "Shrug Treasury", desc: "Community memes, contests & plushies (multisig)", pct: 5, color: "#f7d6d6" },
   { name: "Listings Reserve", desc: "Future listings & liquidity", pct: 5, color: "#b98b73" },
