@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$MUSEJAK — the shrug of Robinhood Chain</title>
+  <meta name="description" content="$MUSEJAK is the softest, shruggiest memecoin on Robinhood Chain. Fair launched on long.xyz, paired with $META." />
+  <meta property="og:title" content="$MUSEJAK — the shrug of Robinhood Chain" />
+  <meta property="og:description" content="Fair launched on long.xyz. Paired with $META. Zero tax. Maximum shrug." />
+  <meta property="og:image" content="assets/banner.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="assets/musejak.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <a href="#top" class="nav__brand">
+      <img src="assets/musejak.jpg" alt="" />
+      <span>musejak</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#buy">How to Buy</a>
+      <a href="#shrugmap">Shrugmap</a>
+    </nav>
+    <a href="https://long.xyz" target="_blank" rel="noopener" class="btn btn--small">Buy on long.xyz</a>
+    <button class="nav__burger" id="burger" aria-label="Menu">☰</button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="pill">🪶 Live on Robinhood Chain · paired with $META</p>
+        <h1 class="felt-title">musejak</h1>
+        <p class="hero__lead">
+          The softest, shruggiest memecoin on <b>Robinhood Chain</b>.<br />
+          Fair launched on <b>long.xyz</b>. Paired with <b>$META</b>.<br />
+          Chart down? <i>*shrug*</i>. Chart up? <i>*shrug harder*</i>.
+        </p>
+
+        <div class="ca" id="caBox">
+          <span class="ca__label">CA</span>
+          <code class="ca__addr" id="caAddr">0xTBA — coming soon on long.xyz</code>
+          <button class="ca__copy" id="copyCa" aria-label="Copy contract address">Copy</button>
+        </div>
+
+        <div class="hero__cta">
+          <a href="https://long.xyz" target="_blank" rel="noopener" class="btn">Buy $MUSEJAK</a>
+          <a href="#tokenomics" class="btn btn--ghost">Tokenomics</a>
+        </div>
+
+        <div class="socials">
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+          <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+          <a href="https://long.xyz" target="_blank" rel="noopener" aria-label="long.xyz">L</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Chart">📈</a>
+        </div>
+      </div>
+
+      <div class="hero__mascot">
+        <div class="mascot" id="mascot" title="Poke musejak">
+          <img src="assets/musejak.jpg" alt="Musejak, a felt mascot shrugging" />
+          <span class="mascot__bubble" id="bubble">idk man 🤷</span>
+        </div>
+        <p class="shrug-count">Community shrugs: <b id="shrugCount">0</b></p>
+      </div>
+    </div>
+    <div class="stitch-wave"></div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>$MUSEJAK</span><span>🤷</span><span>ROBINHOOD CHAIN</span><span>🪶</span><span>PAIRED WITH $META</span><span>🤷</span><span>LONG.XYZ</span><span>🪶</span><span>0% TAX</span><span>🤷</span><span>LP BURNED</span><span>🪶</span>
+      <span>$MUSEJAK</span><span>🤷</span><span>ROBINHOOD CHAIN</span><span>🪶</span><span>PAIRED WITH $META</span><span>🤷</span><span>LONG.XYZ</span><span>🪶</span><span>0% TAX</span><span>🤷</span><span>LP BURNED</span><span>🪶</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__img felt-card">
+        <img src="assets/banner.jpg" alt="Musejak banner" />
+      </div>
+      <div class="about__text">
+        <h2 class="section-title">Who is musejak?</h2>
+        <p>
+          Musejak is a hand-stitched little guy who has seen every chart pattern known to man —
+          and responded to all of them the same way: <b>a gentle shrug</b>.
+        </p>
+        <p>
+          He lives on <b>Robinhood Chain</b>, where stocks and memes finally share the same block.
+          Instead of pairing with boring ETH, musejak pairs with <b>$META</b> — because if you're
+          going to shrug, you might as well shrug at the metaverse.
+        </p>
+        <p>
+          No roadmap promises. No VC bags. No team allocation. Just felt, vibes, and a community
+          that has learned to <i>let go</i>.
+        </p>
+        <ul class="badges">
+          <li>🧶 100% hand-felted</li>
+          <li>🤷 Certified unbothered</li>
+          <li>🏹 Robinhood-native</li>
+          <li>🧿 $META paired</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOKENOMICS ===== -->
+  <section class="section section--pink" id="tokenomics">
+    <div class="container">
+      <h2 class="section-title center">Shrugonomics</h2>
+      <p class="section-sub center">1,000,000,000 $MUSEJAK. Stitched fairly. Distributed softly.</p>
+
+      <div class="stats">
+        <div class="stat felt-card"><span class="stat__num">1B</span><span class="stat__label">Total Supply</span></div>
+        <div class="stat felt-card"><span class="stat__num">0/0</span><span class="stat__label">Buy / Sell Tax</span></div>
+        <div class="stat felt-card"><span class="stat__num">0%</span><span class="stat__label">Team Tokens</span></div>
+        <div class="stat felt-card"><span class="stat__num">🔥</span><span class="stat__label">LP Burned</span></div>
+      </div>
+
+      <div class="tokenomics">
+        <div class="donut-wrap">
+          <svg class="donut" id="donut" viewBox="0 0 220 220" role="img" aria-label="Token allocation chart"></svg>
+          <div class="donut__center">
+            <span class="donut__pct" id="donutPct">1B</span>
+            <span class="donut__name" id="donutName">$MUSEJAK</span>
+          </div>
+        </div>
+        <ul class="alloc" id="alloc"></ul>
+      </div>
+
+      <div class="grid-3 perks">
+        <div class="felt-card perk">
+          <h3>🧿 $META Pair</h3>
+          <p>Every trade of $MUSEJAK routes through $META on Robinhood Chain. Buy the meme, touch the stock. Two assets, one shrug.</p>
+        </div>
+        <div class="felt-card perk">
+          <h3>📈 long.xyz Fair Launch</h3>
+          <p>No presale, no whitelist, no insiders. Everyone buys from the same launch on long.xyz at the same rules. Fair as felt.</p>
+        </div>
+        <div class="felt-card perk">
+          <h3>🔒 Renounced &amp; Burned</h3>
+          <p>Mint authority renounced, LP burned once the pool is live. Nobody can print more musejak. Not even musejak.</p>
+        </div>
+      </div>
+
+      <div class="felt-card meta-airdrop">
+        <div>
+          <h3>🎁 The $META Holder Shrug-drop</h3>
+          <p>
+            5% of supply is reserved for <b>$META holders on Robinhood Chain</b>. Hold $META, get musejak.
+            Snapshot details announced on X — stay soft, stay tuned.
+          </p>
+        </div>
+        <a href="https://x.com/" target="_blank" rel="noopener" class="btn">Follow for snapshot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO BUY ===== -->
+  <section class="section" id="buy">
+    <div class="container">
+      <h2 class="section-title center">How to buy $MUSEJAK</h2>
+      <p class="section-sub center">Four steps. Zero stress. One shrug.</p>
+      <ol class="steps">
+        <li class="felt-card step">
+          <span class="step__n">1</span>
+          <h3>Get a wallet</h3>
+          <p>Use a wallet that supports Robinhood Chain (e.g. Robinhood Wallet, MetaMask or Rabby) and add the Robinhood Chain network.</p>
+        </li>
+        <li class="felt-card step">
+          <span class="step__n">2</span>
+          <h3>Bridge ETH</h3>
+          <p>Bridge some ETH to Robinhood Chain for gas. A little goes a long way — musejak is lightweight felt.</p>
+        </li>
+        <li class="felt-card step">
+          <span class="step__n">3</span>
+          <h3>Grab some $META</h3>
+          <p>$MUSEJAK is paired with $META, so you'll need $META in your wallet to trade into the pool.</p>
+        </li>
+        <li class="felt-card step">
+          <span class="step__n">4</span>
+          <h3>Swap on long.xyz</h3>
+          <p>Head to long.xyz, paste the contract address, swap $META for $MUSEJAK, and perform your first shrug.</p>
+        </li>
+      </ol>
+      <div class="center">
+        <a href="https://long.xyz" target="_blank" rel="noopener" class="btn btn--big">Open long.xyz 🤷</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SHRUGMAP ===== -->
+  <section class="section section--pink" id="shrugmap">
+    <div class="container">
+      <h2 class="section-title center">Shrugmap</h2>
+      <p class="section-sub center">A roadmap, but we're not too fussed about it.</p>
+      <div class="roadmap">
+        <div class="phase felt-card done">
+          <span class="phase__tag">Phase 1</span>
+          <h3>Stitching</h3>
+          <ul>
+            <li>✅ Musejak is felted into existence</li>
+            <li>✅ Website + socials</li>
+            <li>⏳ Fair launch on long.xyz with $META pair</li>
+          </ul>
+        </div>
+        <div class="phase felt-card">
+          <span class="phase__tag">Phase 2</span>
+          <h3>Shrugging</h3>
+          <ul>
+            <li>🤷 Graduate the long.xyz launch</li>
+            <li>🤷 LP burn + contract renounce</li>
+            <li>🤷 $META holder Shrug-drop</li>
+            <li>🤷 Meme contests &amp; sticker pack</li>
+          </ul>
+        </div>
+        <div class="phase felt-card">
+          <span class="phase__tag">Phase 3</span>
+          <h3>Unbothered</h3>
+          <ul>
+            <li>🧶 Real felt musejak plushies</li>
+            <li>🧶 Trackers &amp; listings</li>
+            <li>🧶 Biggest shrug on Robinhood Chain</li>
+          </ul>
+        </div>
+        <div class="phase felt-card">
+          <span class="phase__tag">Phase ∞</span>
+          <h3>idk man</h3>
+          <ul>
+            <li>🌸 Community decides</li>
+            <li>🌸 Musejak continues shrugging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <h2 class="section-title center">FAQ</h2>
+      <details class="felt-card faq">
+        <summary>Why pair with $META instead of ETH?</summary>
+        <p>Robinhood Chain brings stocks on-chain. Pairing with $META ties musejak to that story — every buy of musejak is also a bit of demand for $META in the pool.</p>
+      </details>
+      <details class="felt-card faq">
+        <summary>Is there a team allocation?</summary>
+        <p>No. 0% team. The Shrug Treasury and marketing wallets are for the community and are public on-chain.</p>
+      </details>
+      <details class="felt-card faq">
+        <summary>What is long.xyz?</summary>
+        <p>long.xyz is the launchpad where $MUSEJAK is fair launched on Robinhood Chain — no presale, same rules for everyone.</p>
+      </details>
+      <details class="felt-card faq">
+        <summary>Wen moon?</summary>
+        <p>🤷</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <img src="assets/musejak.jpg" alt="" class="footer__logo" />
+    <p class="felt-title felt-title--sm">musejak</p>
+    <div class="socials socials--center">
+      <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X / Twitter">𝕏</a>
+      <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+      <a href="https://long.xyz" target="_blank" rel="noopener" aria-label="long.xyz">L</a>
+    </div>
+    <p class="disclaimer">
+      $MUSEJAK is a memecoin with no intrinsic value or expectation of financial return. It is not affiliated
+      with Robinhood Markets, Meta Platforms, or long.xyz. There is no formal team or roadmap. The coin is
+      for entertainment purposes only. Crypto is risky — only shrug with what you can afford to lose.
+    </p>
+    <p class="copy">© 2026 musejak · stitched with 🤷 on Robinhood Chain</p>
+  </footer>
+
+  <div class="toast" id="toast">Copied! 🤷</div>
+  <script src="script.js"></script>
+</body>
+</html>
