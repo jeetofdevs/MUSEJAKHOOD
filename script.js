@@ -1,6 +1,6 @@
 // ===== Config — edit these when the token is live =====
 const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on Pons
-const PAIR_ADDRESS = ""; // $META token address on Robinhood Chain — the Pair box stays hidden until this is set
+const PAIR_ADDRESS = "0xc0d6457c16cc70d6790dd43521c899c87ce02f35"; // $META token address on Robinhood Chain
 
 // $META logo: drop a file at assets/meta.png; until then a text badge is shown.
 document.querySelectorAll("img.pair-logo").forEach((img) => {

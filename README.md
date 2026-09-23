@@ -7,5 +7,5 @@ It's a static site with no build step: open `index.html` or host the folder on V
 ## Launch checklist
 - `script.js`: set `CONTRACT_ADDRESS`, and change `ALLOCATIONS` if the tokenomics change
 - `index.html`: replace the chart link, and the Pons links, with the real token URLs
-- `script.js`: set `PAIR_ADDRESS` to the $META token address to show the Pair box
+- `script.js`: `PAIR_ADDRESS` holds the $META token address shown in the Pair box
 - `assets/meta.png`: the $META pair logo
