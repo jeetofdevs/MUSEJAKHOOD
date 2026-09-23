@@ -2,7 +2,7 @@
 const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on long.xyz
 const PAIR_ADDRESS = "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"; // $AI (Artificial Inu) on Robinhood Chain
 
-// $AI logo: drop the official file at assets/ai.png; otherwise try DexScreener's CDN, then a text badge.
+// $AI logo: drop the official file at assets/ai.jpg; otherwise try DexScreener's CDN, then a text badge.
 const AI_LOGO_FALLBACK = `https://dd.dexscreener.com/ds-data/tokens/robinhood/${PAIR_ADDRESS}.png`;
 document.querySelectorAll("img.ai-logo").forEach((img) => {
   img.addEventListener("error", function onErr() {

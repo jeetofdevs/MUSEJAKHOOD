@@ -7,4 +7,4 @@ It's a static site with no build step: open `index.html` or host the folder on V
 ## Launch checklist
 - `script.js`: set `CONTRACT_ADDRESS`, and change `ALLOCATIONS` if the tokenomics change
 - `index.html`: replace the chart link, and the long.xyz links, with the real token URLs
-- `assets/ai.png`: add the official $AI (Artificial Inu) logo. Until it exists, the page tries DexScreener's logo CDN and then shows an "AI" badge
+- `assets/ai.jpg`: the $AI (Artificial Inu) pair logo
