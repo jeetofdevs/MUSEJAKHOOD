@@ -341,14 +341,14 @@ a { color: inherit; }
   .reveal { opacity: 1; translate: 0 0; }
 }
 
-/* ---------- $AI pair ---------- */
+/* ---------- $META pair ---------- */
 .pair {
   display: inline-flex; align-items: center; gap: 12px;
   background: #fffaf5; border: 2px dashed var(--blush);
   padding: 6px 18px 6px 8px; border-radius: 999px; margin-bottom: 18px;
 }
 .pair__logos { display: flex; }
-.pair__logos img, .pair__logos .ai-logo {
+.pair__logos img, .pair__logos .pair-logo {
   width: 40px; height: 40px; border-radius: 50%;
   border: 3px solid var(--brown); background: #fff; object-fit: cover;
 }
@@ -357,17 +357,17 @@ a { color: inherit; }
 .pair__text b { font-family: "Fredoka"; font-size: 17px; }
 .pair__text small { font-weight: 700; color: var(--muted); font-size: 12px; }
 
-.ai-logo {
+.pair-logo {
   display: inline-grid; place-items: center; flex-shrink: 0;
   width: 22px; height: 22px; border-radius: 50%; object-fit: cover; vertical-align: middle;
 }
-span.ai-logo {
-  background: linear-gradient(135deg, #6b4636, #e99a9a);
-  color: #fff; font-family: "Fredoka"; font-weight: 700; font-size: 0.8em;
+span.pair-logo {
+  background: linear-gradient(135deg, #0668e1, #0080fb);
+  color: #fff; font-family: "Fredoka"; font-weight: 700; font-size: 0.5em; letter-spacing: 0;
 }
-.pair__logos span.ai-logo { font-size: 14px; background: linear-gradient(135deg, #6b4636, #e99a9a); }
+.pair__logos span.pair-logo { font-size: 10px; background: linear-gradient(135deg, #0668e1, #0080fb); }
 
 .ca--pair { margin-top: 12px; box-shadow: 0 5px 0 var(--pink); border-width: 2px; }
 .ca__label--pair { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px 2px 3px; }
 .perk__pair { display: flex; align-items: center; gap: 10px; }
-.perk__pair .ai-logo { width: 34px; height: 34px; border: 2px solid var(--brown); }
+.perk__pair .pair-logo { width: 34px; height: 34px; border: 2px solid var(--brown); }

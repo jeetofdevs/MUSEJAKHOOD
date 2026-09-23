@@ -1,10 +1,11 @@
 # musejak ($MUSEJAK)
 
-Landing page for $MUSEJAK, a memecoin on Robinhood Chain launched on Pons and paired with $AI.
+Landing page for $MUSEJAK, a memecoin on Robinhood Chain launched on Pons and paired with $META.
 
 It's a static site with no build step: open `index.html` or host the folder on Vercel, Netlify or GitHub Pages.
 
 ## Launch checklist
 - `script.js`: set `CONTRACT_ADDRESS`, and change `ALLOCATIONS` if the tokenomics change
 - `index.html`: replace the chart link, and the Pons links, with the real token URLs
-- `assets/ai.jpg`: the $AI (Artificial Inu) pair logo
+- `script.js`: set `PAIR_ADDRESS` to the $META token address to show the Pair box
+- `assets/meta.png`: optional $META logo; a text badge is shown until it exists

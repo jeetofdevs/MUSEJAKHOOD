@@ -1,30 +1,24 @@
 // ===== Config — edit these when the token is live =====
 const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on Pons
-const PAIR_ADDRESS = "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"; // $AI (Artificial Inu) on Robinhood Chain
+const PAIR_ADDRESS = ""; // $META token address on Robinhood Chain — the Pair box stays hidden until this is set
 
-// $AI logo: drop the official file at assets/ai.jpg; otherwise try DexScreener's CDN, then a text badge.
-const AI_LOGO_FALLBACK = `https://dd.dexscreener.com/ds-data/tokens/robinhood/${PAIR_ADDRESS}.png`;
-document.querySelectorAll("img.ai-logo").forEach((img) => {
-  img.addEventListener("error", function onErr() {
-    if (!img.dataset.fallback) {
-      img.dataset.fallback = "1";
-      img.src = AI_LOGO_FALLBACK;
-      return;
-    }
-    img.removeEventListener("error", onErr);
+// $META logo: drop a file at assets/meta.png; until then a text badge is shown.
+document.querySelectorAll("img.pair-logo").forEach((img) => {
+  const toBadge = () => {
     const badge = document.createElement("span");
     badge.className = img.className;
     badge.setAttribute("role", "img");
     badge.setAttribute("aria-label", img.alt);
-    badge.textContent = "AI";
+    badge.textContent = "META";
     img.replaceWith(badge);
-  });
-  if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event("error"));
+  };
+  img.addEventListener("error", toBadge, { once: true });
+  if (img.complete && img.naturalWidth === 0) toBadge();
 });
 
 const ALLOCATIONS = [
-  { name: "Pons Fair Launch", desc: "Bonding curve → $AI pool, LP burned", pct: 80, color: "#d9b894" },
-  { name: "$AI Holder Shrug-drop", desc: "Airdrop to $AI holders on Robinhood Chain", pct: 5, color: "#e99a9a" },
+  { name: "Pons Fair Launch", desc: "Bonding curve → $META pool, LP burned", pct: 80, color: "#d9b894" },
+  { name: "$META Holder Shrug-drop", desc: "Airdrop to $META holders on Robinhood Chain", pct: 5, color: "#e99a9a" },
   { name: "Shrug Treasury", desc: "Community memes, contests & plushies (multisig)", pct: 5, color: "#f7d6d6" },
   { name: "Listings Reserve", desc: "Future listings & liquidity", pct: 5, color: "#b98b73" },
   { name: "Marketing", desc: "KOLs, stickers & making noise", pct: 5, color: "#6b4636" },
@@ -56,7 +50,10 @@ document.getElementById("copyCa").addEventListener("click", () => {
   copy(CONTRACT_ADDRESS);
 });
 
-document.getElementById("pairAddr").textContent = PAIR_ADDRESS;
+if (PAIR_ADDRESS) {
+  document.getElementById("pairBox").hidden = false;
+  document.getElementById("pairAddr").textContent = PAIR_ADDRESS;
+}
 document.getElementById("copyPair").addEventListener("click", () => copy(PAIR_ADDRESS));
 
 // ===== Mobile nav =====
@@ -69,7 +66,7 @@ const mascot = document.getElementById("mascot");
 const bubble = document.getElementById("bubble");
 const countEl = document.getElementById("shrugCount");
 const LINES = [
-  "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with $AI btw",
+  "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with $META btw",
   "wen moon? 🤷", "still felt, still fine", "robinhood chain comfy", "1.5% tax, 100% shrug",
   "who sold? 🤷", "just vibing", "stay soft", "gm 🧶",
 ];
