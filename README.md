@@ -6,4 +6,4 @@ It's a static site with no build step: open `index.html` or host the folder on V
 
 ## Launch checklist
 - `script.js`: set `CONTRACT_ADDRESS`, and change `ALLOCATIONS` if the tokenomics change
-- `index.html`: replace the X, Telegram and chart links, and the long.xyz links, with the real token URLs
+- `index.html`: replace the chart link, and the long.xyz links, with the real token URLs
