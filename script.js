@@ -42,7 +42,7 @@ const bubble = document.getElementById("bubble");
 const countEl = document.getElementById("shrugCount");
 const LINES = [
   "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with $META btw",
-  "wen moon? 🤷", "still felt, still fine", "robinhood chain comfy", "0% tax, 100% shrug",
+  "wen moon? 🤷", "still felt, still fine", "robinhood chain comfy", "1.5% tax, 100% shrug",
   "who sold? 🤷", "just vibing", "stay soft", "gm 🧶",
 ];
 let shrugs = 0;
