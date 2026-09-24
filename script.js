@@ -17,11 +17,8 @@ document.querySelectorAll("img.pair-logo").forEach((img) => {
 });
 
 const ALLOCATIONS = [
-  { name: "pump.fun Fair Launch", desc: "Bonding curve → SOL pool, LP burned", pct: 80, color: "#d9b894" },
-  { name: "Early Shrugger Drop", desc: "Reserved for early community shruggers on Solana", pct: 5, color: "#e99a9a" },
-  { name: "Shrug Treasury", desc: "Community memes, contests & plushies (multisig)", pct: 5, color: "#f7d6d6" },
-  { name: "Listings Reserve", desc: "Future listings & liquidity", pct: 5, color: "#b98b73" },
-  { name: "Marketing", desc: "KOLs, stickers & making noise", pct: 5, color: "#6b4636" },
+  { name: "pump.fun Bonding Curve", desc: "Sold on the curve, same price rules for everyone", pct: 80, color: "#d9b894" },
+  { name: "Burned Liquidity", desc: "Added to the PumpSwap pool on graduation, LP burned", pct: 20, color: "#e99a9a" },
 ];
 
 // ===== Contract address =====
@@ -67,7 +64,7 @@ const bubble = document.getElementById("bubble");
 const countEl = document.getElementById("shrugCount");
 const LINES = [
   "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with SOL btw",
-  "wen moon? 🤷", "still felt, still fine", "solana comfy", "1.5% tax, 100% shrug",
+  "wen moon? 🤷", "still felt, still fine", "solana comfy", "0% tax, 100% shrug",
   "who sold? 🤷", "just vibing", "stay soft", "gm 🧶",
 ];
 let shrugs = 0;
