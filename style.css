@@ -367,6 +367,7 @@ span.pair-logo {
 }
 .pair__logos span.pair-logo { font-size: 10px; background: linear-gradient(135deg, #0668e1, #0080fb); }
 
+.ca[hidden] { display: none; }
 .ca--pair { margin-top: 12px; box-shadow: 0 5px 0 var(--pink); border-width: 2px; }
 .ca__label--pair { display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px 2px 3px; }
 .perk__pair { display: flex; align-items: center; gap: 10px; }

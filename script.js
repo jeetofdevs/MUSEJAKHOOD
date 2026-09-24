@@ -1,15 +1,15 @@
 // ===== Config — edit these when the token is live =====
-const CONTRACT_ADDRESS = ""; // e.g. "0x1234...abcd" once launched on Pons
-const PAIR_ADDRESS = "0xc0d6457c16cc70d6790dd43521c899c87ce02f35"; // $META token address on Robinhood Chain
+const CONTRACT_ADDRESS = ""; // the $MUSEJAK mint address once launched on pump.fun
+const PAIR_ADDRESS = ""; // optional: an address to show in the Pair box (hidden while empty)
 
-// $META logo: drop a file at assets/meta.png; until then a text badge is shown.
+// Pair logo (assets/sol.png); a text badge is shown if it fails to load.
 document.querySelectorAll("img.pair-logo").forEach((img) => {
   const toBadge = () => {
     const badge = document.createElement("span");
     badge.className = img.className;
     badge.setAttribute("role", "img");
     badge.setAttribute("aria-label", img.alt);
-    badge.textContent = "META";
+    badge.textContent = "SOL";
     img.replaceWith(badge);
   };
   img.addEventListener("error", toBadge, { once: true });
@@ -17,8 +17,8 @@ document.querySelectorAll("img.pair-logo").forEach((img) => {
 });
 
 const ALLOCATIONS = [
-  { name: "Pons Fair Launch", desc: "Bonding curve → $META pool, LP burned", pct: 80, color: "#d9b894" },
-  { name: "$META Holder Shrug-drop", desc: "Airdrop to $META holders on Robinhood Chain", pct: 5, color: "#e99a9a" },
+  { name: "pump.fun Fair Launch", desc: "Bonding curve → SOL pool, LP burned", pct: 80, color: "#d9b894" },
+  { name: "Early Shrugger Drop", desc: "Reserved for early community shruggers on Solana", pct: 5, color: "#e99a9a" },
   { name: "Shrug Treasury", desc: "Community memes, contests & plushies (multisig)", pct: 5, color: "#f7d6d6" },
   { name: "Listings Reserve", desc: "Future listings & liquidity", pct: 5, color: "#b98b73" },
   { name: "Marketing", desc: "KOLs, stickers & making noise", pct: 5, color: "#6b4636" },
@@ -66,8 +66,8 @@ const mascot = document.getElementById("mascot");
 const bubble = document.getElementById("bubble");
 const countEl = document.getElementById("shrugCount");
 const LINES = [
-  "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with $META btw",
-  "wen moon? 🤷", "still felt, still fine", "robinhood chain comfy", "1.5% tax, 100% shrug",
+  "idk man 🤷", "chart down? 🤷", "chart up? 🤷🤷", "paired with SOL btw",
+  "wen moon? 🤷", "still felt, still fine", "solana comfy", "1.5% tax, 100% shrug",
   "who sold? 🤷", "just vibing", "stay soft", "gm 🧶",
 ];
 let shrugs = 0;
